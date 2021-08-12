@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+<div class="container-fluid">
+  <v-app>
+    <Topnav title="Products"/>
+
+  <Body/>
+
+  <Footer/>
+  </v-app>
+</div>
+</template> 
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Topnav from './components/topnav/Topnav'
+import Footer from './components/footer/Footer'
+import Body from './components/body/Body'
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Topnav,
+    Body,
+    Footer,
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("assets/css/footer.css");
+@import url("assets/css/topnav.css");
+@import url("assets/css/body.css");
+@import url("assets/css/search.css");
 </style>
